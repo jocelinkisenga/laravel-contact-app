@@ -3,8 +3,8 @@
 
 ## instalation
 
-> clone the project on your local machine
-> configuer your database connection
-> run migration
-> then run the artisan server
+. clone the project on your local machine
+. configuer your database connection
+. run migration
+. then run the artisan server
 
