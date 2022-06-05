@@ -10,7 +10,7 @@ class ContactController extends Controller
 {
 
     public function index (){
-        $Contact = Contact::all();
+        $Contact = Contact::orderBy('first_name','asc')->paginate(5);
         return view('pages.index',['contacts'=>$Contact]);
     }
 
@@ -30,7 +30,10 @@ class ContactController extends Controller
             ]);
     }
 
-    public function show (Contact $contact){
+    public function show (string $slug, int $id){
+        $Contact = Contact::findOrFail($id);
+        
+        return view('pages.show', ['contact'=>$Contact]);
 
     }
 
