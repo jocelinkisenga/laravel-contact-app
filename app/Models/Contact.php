@@ -13,6 +13,6 @@ class Contact extends Model
     protected $fillable = ['first_name', 'last_name', 'email', 'phone', 'adresse', 'company_id'];
 
     public function company(){
-        return $this->belongTo(Company::class);
+        return $this->belongsTo(Company::class);
     }
 }
