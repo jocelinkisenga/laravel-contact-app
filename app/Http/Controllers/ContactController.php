@@ -10,8 +10,10 @@ class ContactController extends Controller
 {
 
     public function index (){
+
+        $companies = Company::all();
         $Contact = Contact::orderBy('first_name','asc')->paginate(5);
-        return view('pages.index',['contacts'=>$Contact]);
+        return view('pages.index',['contacts'=>$Contact, 'companies'=>$companies]);
     }
 
     public function create (){

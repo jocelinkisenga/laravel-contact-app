@@ -24,9 +24,9 @@
                       <div class="col">
                         <select class="custom-select">
                           <option value="" selected>All Companies</option>
-                          <option value="1">Company One</option>
-                          <option value="2">Company Two</option>
-                          <option value="3">Company Three</option>
+                        @foreach($companies as $company)
+                          <option value="1">{{$company->name}}</option>
+                        @endforeach
                         </select>
                       </div>
                       <div class="col">
