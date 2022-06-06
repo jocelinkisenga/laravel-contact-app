@@ -17,7 +17,7 @@
                     <div class="form-group row">
                       <label for="name" class="col-md-3 col-form-label">Name</label>
                       <div class="col-md-9">
-                        <input type="text" name="first_name" id="first_name" class="form-control is-invalid">
+                        <input type="text" name="name" id="first_name" class="form-control is-invalid">
                         <div class="invalid-feedback">
                           Please choose a name.
                         </div>

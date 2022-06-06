@@ -20,6 +20,6 @@ class CompanyController extends Controller
                     'website'=>$request->website,
                 ]);
 
-            return redirect(route('/'));
+           
     }
 }
