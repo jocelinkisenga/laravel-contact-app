@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\ContactController::class, 'index'])->name('index');
 Route::get('/contact',[App\Http\Controllers\ContactController::class, 'create'])->name('create-contact');
+Route::get('/company',[App\Http\Controllers\ContactController::class, 'create'])->name('create-company');
 Route::get('/{slug}/{id}',[App\Http\Controllers\ContactController::class, 'show'])->name('contact_detail');
 
 Route::post('/contact',[App\Http\Controllers\ContactController::class, 'store'])->name('store_contact');
+Route::post('/company',[App\Http\Controllers\ContactController::class, 'store'])->name('store_company');

@@ -14,6 +14,9 @@
                     <div class="ml-auto">
                       <a href="{{route('create-contact')}}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add New</a>
                     </div>
+                    <div class="ml-auto">
+                      <a href="{{route('create-company')}}" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Add New company</a>
+                    </div>
                   </div>
                 </div>
               <div class="card-body">
