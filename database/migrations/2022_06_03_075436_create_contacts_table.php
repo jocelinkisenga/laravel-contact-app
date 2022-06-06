@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('adresse');
-            $table->foreignId('company_id');
+            $table->foreignId('company_id')->nullable();
             $table->timestamps();
 
 
