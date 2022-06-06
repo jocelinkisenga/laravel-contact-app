@@ -11,7 +11,7 @@ class CompanyController extends Controller
         return view('pages.company');
     }
 
-    public function create(Request $request){
+    public function store(Request $request){
 
             Company::create([
                     'name'=>$request->name,
