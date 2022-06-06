@@ -20,10 +20,9 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('adresse');
-            $table->unsignedBigInteger('company_id');
+            $table->foreignId('company_id');
             $table->timestamps();
 
-            $table->foreing('company_id')->references('id')->on('companies')->onDelete('cascade');
 
         });
     }
