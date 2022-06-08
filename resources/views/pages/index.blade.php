@@ -25,10 +25,10 @@
                   <div class="col-md-6">
                     <div class="row">
                       <div class="col">
-                        <select class="custom-select">
+                        <select id="filter_company_id" name="company_id" class="custom-select">
                           <option value="" selected>All Companies</option>
                         @foreach($companies as $company)
-                          <option value="1">{{$company->name}}</option>
+                          <option value="{{$company->id}}">{{$company->name}}</option>
                         @endforeach
                         </select>
                       </div>
