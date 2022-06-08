@@ -11,8 +11,12 @@ class ContactController extends Controller
 
     public function index (){
 
-        $companies = Company::all();
-        $Contact = Contact::orderBy('first_name','asc')->paginate(5);
+        $companies = Company::orderBy('name')->pluck('name','id')->prepend('All companies','');
+        $Contact = Contact::orderBy('first_name','asc')->where(function($query){
+            if ($companyId = request('company_id')) {
+                $query->where('company_id', $companyId);
+            }
+        })->paginate(5);
         return view('pages.index',['contacts'=>$Contact, 'companies'=>$companies]);
     }
 

@@ -26,9 +26,9 @@
                     <div class="row">
                       <div class="col">
                         <select id="filter_company_id" name="company_id" class="custom-select">
-                          <option value="" selected>All Companies</option>
-                        @foreach($companies as $company)
-                          <option value="{{$company->id}}">{{$company->name}}</option>
+                          
+                        @foreach($companies as $id => $name)
+                          <option {{$id == request('company_id') ? 'selected' : ''}} value="{{$id}}">{{$name}}</option>
                         @endforeach
                         </select>
                       </div>
@@ -81,7 +81,7 @@
                   </tbody>
                 </table> 
 
-                {{$contacts->links()}}
+                {{$contacts->appends(request()->only('company_id'))->links()}}
               </div>
             </div>
           </div>
