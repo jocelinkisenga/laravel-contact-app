@@ -12,7 +12,7 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12">
-                  <form action="{{route('store_contact')}}" method="post" >
+                  <form action="{{route('store-contact')}}" method="post" >
                   @csrf
                     <div class="form-group row">
                       <label for="first_name" class="col-md-3 col-form-label">First Name</label>
@@ -23,7 +23,7 @@
                         </div>
                       </div>
                     </div>
-
+                    <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
                     <div class="form-group row">
                       <label for="last_name" class="col-md-3 col-form-label">Last Name</label>
                       <div class="col-md-9">

@@ -14,11 +14,13 @@ class CompanyController extends Controller
     public function store(Request $request){
 
             Company::create([
+                    'user_id'=>$request->user_id,
                     'name'=>$request->name,
                     'email'=>$request->email,                   
                     'adresse'=>$request->address,
                     'website'=>$request->website,
                 ]);
+            redirect('/');
 
            
     }

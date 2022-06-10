@@ -17,7 +17,8 @@ Route::get('/',[App\Http\Controllers\ContactController::class, 'index']);
 Route::get('contact',[App\Http\Controllers\ContactController::class, 'create'])->name('create-contact');
 Route::get('/{slug}/{id}',[App\Http\Controllers\ContactController::class, 'show'])->name('contact-detail');
 Route::get('company',[App\Http\Controllers\CompanyController::class, 'create'])->name('create-company');
-
+Route::post('contact',[App\Http\Controllers\ContactController::class, 'store'])->name('store-contact');
+Route::post('company',[App\Http\Controllers\CompanyController::class, 'store'])->name('store-company');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

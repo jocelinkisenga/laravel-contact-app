@@ -27,6 +27,7 @@ class ContactController extends Controller
 
     public function store(Request $request){
         Contact::create([
+                'user_id'=>$request->user_id,
                 'first_name'=>$request->first_name,
                 'last_name'=>$request->last_name,
                 'email'=>$request->email,
