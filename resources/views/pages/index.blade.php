@@ -5,6 +5,8 @@
     <!-- content -->
     <main class="py-5">
       <div class="container">
+
+@auth
         <div class="row">
           <div class="col-md-12">
             <div class="card">
@@ -69,7 +71,7 @@
                       <td>{{$contact->email}}</td>
                       <td>{{$contact->company->name}}</td>
                       <td width="150">
-                        <a href="{{route('contact_detail',['slug'=>$contact->first_name, 'id'=>$contact->id])}}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
+                        <a href="{{route('contact-detail',['slug'=>$contact->first_name, 'id'=>$contact->id])}}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
                         <a href="form.html" class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
                         <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
                       </td>
@@ -86,6 +88,13 @@
             </div>
           </div>
         </div>
+@else
+         <!-- content -->
+         <div class="row">
+           <h1> Bienvenu sur <strong class="text-primary">contacts app</strong></h1>
+           <p class="mt-4"> créer votre entrprise et gérer de manière elegante tous vos contacts </p>
+         </div>
+@endauth
       </div>
     </main>
 @endsection
