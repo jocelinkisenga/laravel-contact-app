@@ -12,12 +12,12 @@
             <div class="card">
                 <div class="card-header card-title">
                   <div class="d-flex align-items-center">
-                    <h2 class="mb-0">All Contacts</h2>
+                    <h2 class="mb-0">Mes contacts</h2>
                     <div class="ml-auto">
-                      <a href="{{route('create-contact')}}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add New</a>
+                      <a href="{{route('create-contact')}}" class="btn btn-success mr-2"><i class="fa fa-plus-circle"></i> créer un contact</a>
                     </div>
                     <div class="ml-auto">
-                      <a href="{{route('create-company')}}" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Add New company</a>
+                      <a href="{{route('create-company')}}" class="btn btn-primary"><i class="fa fa-plus-circle"></i> créer une entreprise</a>
                     </div>
                   </div>
                 </div>
@@ -34,6 +34,7 @@
                         @endforeach
                         </select>
                       </div>
+                      <!--
                       <div class="col">
                         <div class="input-group mb-3">
                           <input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="button-addon2">
@@ -44,7 +45,7 @@
                             <button class="btn btn-outline-secondary" type="button" id="button-addon2">
                               <i class="fa fa-search"></i>
                             </button>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -54,10 +55,10 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">First Name</th>
-                      <th scope="col">Last Name</th>
+                      <th scope="col">Nom</th>
+                      <th scope="col">prénom</th>
                       <th scope="col">Email</th>
-                      <th scope="col">Company</th>
+                      <th scope="col">entreprise</th>
                       <th scope="col">Actions</th>
                     </tr>
                   </thead>
@@ -72,8 +73,8 @@
                       <td>{{$contact->company->name}}</td>
                       <td width="150">
                         <a href="{{route('contact-detail',['slug'=>$contact->first_name, 'id'=>$contact->id])}}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
-                        <a href="form.html" class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
-                        <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a>
+                      <!--  <a href="form.html" class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>
+                        <a href="#" class="btn btn-sm btn-circle btn-outline-danger" title="Delete" onclick="confirm('Are you sure?')"><i class="fa fa-times"></i></a> -->
                       </td>
                     </tr>
                   @endforeach

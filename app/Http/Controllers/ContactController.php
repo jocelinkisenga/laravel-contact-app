@@ -5,23 +5,37 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Company;
+use Auth;
 
 class ContactController extends Controller
 {
+    private int $user_id;
 
     public function index (){
 
-        $companies = Company::orderBy('name')->pluck('name','id')->prepend('All companies','');
-        $Contact = Contact::orderBy('first_name','asc')->where(function($query){
-            if ($companyId = request('company_id')) {
-                $query->where('company_id', $companyId);
+    if(Auth::check()){
+        $this->user_id = auth()->user()->id;
+        $companies = Company::whereUser_id($this->user_id)
+                              ->orderBy('name')->pluck('name','id')
+                              ->prepend('All companies','');
+    
+        $Contact = Contact::where('user_id',$this->user_id)
+                            ->orderBy('first_name','asc')
+                            ->where(function($query){
+                                            if ($companyId = request('company_id')) {
+                                                    $query->where('company_id', $companyId);
+                                    }
+                            })->paginate(5);
+                                
+                            return view('pages.index',['contacts'=>$Contact, 'companies'=>$companies]);
+            }else{
+                return view('pages.index');
             }
-        })->paginate(5);
-        return view('pages.index',['contacts'=>$Contact, 'companies'=>$companies]);
     }
 
     public function create (){
-        $companies = Company::all();
+        $this->user_id = auth()->user()->id;
+        $companies = Company::whereUser_id($this->user_id)->get();
         return view('pages.form', ['companies'=>$companies]);
     }
 
