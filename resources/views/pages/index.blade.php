@@ -93,7 +93,7 @@
          <!-- content -->
          <div class="row">
            <h1> Bienvenu sur <strong class="text-primary">contacts app</strong></h1>
-           <p class="mt-4"> créer votre entrprise et gérer de manière elegante tous vos contacts </p>
+           <p class="mt-4"> créer votre entrprise et gérer de manière elegante tous vos contacts, <a href="{{route('login')}}">connectez-vous </a>pour créer votre entreprise et y ajouter vos contacts ou <a href="{{route('register')}}">créer votre compte </a> </p>
          </div>
 @endauth
       </div>
