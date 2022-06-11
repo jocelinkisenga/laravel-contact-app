@@ -7,7 +7,7 @@
           <div class="col-md-8">
             <div class="card">
               <div class="card-header card-title">
-                <strong>Contact Details for {{$contact->first_name}}</strong>
+                <strong>Details entreprise for {{$contact->first_name}}</strong>
               </div>           
               <div class="card-body">
                 <div class="row">

@@ -7,6 +7,11 @@ use App\Models\Company;
 
 class CompanyController extends Controller
 {
+
+    public function index(){
+        return view('pages.all-companies');
+    }
+
     public function create (){
         return view('pages.company');
     }
