@@ -20,7 +20,7 @@ class CompanyController extends Controller
                     'adresse'=>$request->address,
                     'website'=>$request->website,
                 ]);
-            redirect('/');
+           return  redirect('/');
 
            
     }

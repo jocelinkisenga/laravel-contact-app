@@ -7,7 +7,7 @@
           <div class="col-md-8">
             <div class="card">
               <div class="card-header card-title">
-                <strong>Add New Contact</strong>
+                <strong>créer une entreprise</strong>
               </div>           
               <div class="card-body">
                 <div class="row">

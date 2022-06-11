@@ -49,6 +49,7 @@ class ContactController extends Controller
                 'adresse'=>$request->address,
                 'company_id'=>$request->company_id
             ]);
+        return redirect('/');
     }
 
     public function show (string $slug, int $id){
