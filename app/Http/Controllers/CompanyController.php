@@ -17,6 +17,7 @@ class CompanyController extends Controller
         return view('pages.company');
     }
 
+
     public function store(Request $request){
 
             Company::create([
@@ -29,5 +30,10 @@ class CompanyController extends Controller
            return  redirect('/');
 
            
+    }
+
+    public function show(string $slug, int $id){
+        $company= Company::findOrFail($id);
+        return view('pages.companyShow',['company'=>$company]);
     }
 }
