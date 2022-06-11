@@ -22,8 +22,8 @@ class ContactController extends Controller
         $Contact = Contact::where('user_id',$this->user_id)
                             ->orderBy('first_name','asc')
                             ->where(function($query){
-                                            if ($companyId = request('company_id')) {
-                                                    $query->where('company_id', $companyId);
+                                    if ($companyId = request('company_id')) {
+                                            $query->where('company_id', $companyId);
                                     }
                             })->paginate(5);
                                 

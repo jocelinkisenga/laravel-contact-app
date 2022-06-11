@@ -9,7 +9,8 @@ class CompanyController extends Controller
 {
 
     public function index(){
-        return view('pages.all-companies');
+        $companies = Company::paginate(2);
+        return view('pages.allCompanies', ['companies'=>$companies]);
     }
 
     public function create (){

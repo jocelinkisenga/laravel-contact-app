@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[App\Http\Controllers\ContactController::class, 'index']);
 Route::get('contact',[App\Http\Controllers\ContactController::class, 'create'])->name('create-contact');
-Route::get('/{slug}/{id}',[App\Http\Controllers\ContactController::class, 'show'])->name('contact-detail');
+Route::get('/contact/{id}',[App\Http\Controllers\ContactController::class, 'show'])->name('contact-detail');
 Route::post('contact',[App\Http\Controllers\ContactController::class, 'store'])->name('store-contact');
 
-Route::get('company',[App\Http\Controllers\CompanyController::class, 'index'])->name('all-companies');
-Route::get('company',[App\Http\Controllers\CompanyController::class, 'create'])->name('create-company');
+Route::get('/companies',[App\Http\Controllers\CompanyController::class, 'index']);
+Route::get('/company',[App\Http\Controllers\CompanyController::class, 'create'])->name('create-company');
 Route::get('/{slug}/{id}',[App\Http\Controllers\CompanyController::class, 'show'])->name('company-detail');
 Route::post('company',[App\Http\Controllers\CompanyController::class, 'store'])->name('store-company');
 
