@@ -1,5 +1,5 @@
-
-
+@extends('layouts.index')
+@section('content')
     <!-- content -->
     <main class="py-5">
       <div class="container">
@@ -95,3 +95,4 @@
       return false;
     });
     </script>
+@endsection
