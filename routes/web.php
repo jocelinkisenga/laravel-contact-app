@@ -23,6 +23,8 @@ Route::get('/company',[App\Http\Controllers\CompanyController::class, 'create'])
 Route::get('/{slug}/{id}',[App\Http\Controllers\CompanyController::class, 'show'])->name('company-detail');
 Route::post('company',[App\Http\Controllers\CompanyController::class, 'store'])->name('store-company');
 
+Route::get('/profile',[App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
