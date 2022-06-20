@@ -27,14 +27,14 @@
                   <div class="col-md-8">
                     <div class="form-group">
                         <label for="first_name">First Name</label>
-                        <input type="text" name="first_name" id="first_name" class="form-control is-invalid">
+                        <input type="text" name="first_name" value="{{Auth::suser()->name}}" id="first_name" class="form-control is-invalid">
                         <div class="invalid-feedback">
                           Please choose a username.
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="last_name">Last Name</label>
+                        <label for="last_name">Nom</label>
                         <input type="text" name="last_name" id="last_name" class="form-control">
                     </div>
 
