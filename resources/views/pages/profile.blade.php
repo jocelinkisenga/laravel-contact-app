@@ -27,7 +27,7 @@
                   <div class="col-md-8">
                     <div class="form-group">
                         <label for="first_name">First Name</label>
-                        <input type="text" name="first_name" value="{{Auth::suser()->name}}" id="first_name" class="form-control is-invalid">
+                        <input type="text" name="first_name" value="{{Auth::user()->name}}" id="first_name" class="form-control is-invalid">
                         <div class="invalid-feedback">
                           Please choose a username.
                         </div>

@@ -73,6 +73,7 @@ class ProfileController extends Controller
     {
         $new_user = User::find($user);
         $new_user->update([
+            'name'->$request->name,
             ''
             ]);
     }
