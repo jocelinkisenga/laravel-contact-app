@@ -24,7 +24,7 @@ Route::get('/{slug}/{id}',[App\Http\Controllers\CompanyController::class, 'show'
 Route::post('company',[App\Http\Controllers\CompanyController::class, 'store'])->name('store-company');
 
 Route::get('/profile',[App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
-
+Route::post('/profile',[App\Http\Controllers\ProfileController::class, 'update'])->name('profile');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

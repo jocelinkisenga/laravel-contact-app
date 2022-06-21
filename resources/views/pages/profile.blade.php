@@ -21,10 +21,13 @@
             <div class="card">
               <div class="card-header card-title">
                 <strong>Edit Profile</strong>
-              </div>           
+              </div>  
+            <form action="{{route('profile')}}" method="post">    
+            @csrf     
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-8">
+
                     <div class="form-group">
                         <label for="first_name">nom</label>
                         <input type="text" name="first_name" value="{{Auth::user()->name}}" id="first_name" class="form-control is-invalid">
@@ -71,6 +74,7 @@
                   </div>
                 </div>
               </div>
+            </form>
             </div>
           </div>
         </div>
