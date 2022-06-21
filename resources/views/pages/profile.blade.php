@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="bio">Bio</label>
+                        <label for="bio">Ajouter une Biographie</label>
                         <textarea name="bio" id="biod" rows="3" class="form-control"></textarea>
                     </div>
                   </div>
