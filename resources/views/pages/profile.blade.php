@@ -26,16 +26,16 @@
                 <div class="row">
                   <div class="col-md-8">
                     <div class="form-group">
-                        <label for="first_name">First Name</label>
+                        <label for="first_name">nom</label>
                         <input type="text" name="first_name" value="{{Auth::user()->name}}" id="first_name" class="form-control is-invalid">
                         <div class="invalid-feedback">
-                          Please choose a username.
+                          
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="last_name">Nom</label>
-                        <input type="text" name="last_name" id="last_name" class="form-control">
+                        <label for="last_name">email</label>
+                        <input type="text" name="last_name" id="last_name" value="{{Auth::user()->email}}" class="form-control">
                     </div>
 
                     <div class="form-group">
