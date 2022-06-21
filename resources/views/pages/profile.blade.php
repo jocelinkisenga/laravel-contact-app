@@ -84,7 +84,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jasny-bootstrap.min.js"></script>
+    <script src="{{asset('assets/js/jasny-bootstrap.min.js')}}"></script>
     <script>
     $("#add-new-group").hide();
     $('#add-group-btn').click(function () {      
