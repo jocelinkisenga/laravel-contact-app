@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -69,9 +72,11 @@ class ProfileController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
-        $fileName=$request->file('photo')->getClientOriginalName();
+        
+        $fileName= Auth::user()->id.'.'.$request->"photo"->getClientOriginalName();
+        dd($fileName);
         $path=$request->file('photo')->storeAs('uploads', $fileName, 'public');
 
        /* $new_user = User::find($user);
