@@ -30,7 +30,7 @@
 
                     <div class="form-group">
                         <label for="first_name">nom</label>
-                        <input type="text" name="first_name" value="{{Auth::user()->name}}" id="first_name" class="form-control is-invalid">
+                        <input type="text" name="name" value="{{Auth::user()->name}}" id="first_name" class="form-control is-invalid">
                         <div class="invalid-feedback">
                           
                         </div>
@@ -38,12 +38,12 @@
 
                     <div class="form-group">
                         <label for="last_name">email</label>
-                        <input type="text" name="last_name" id="last_name" value="{{Auth::user()->email}}" class="form-control">
+                        <input type="text" name="email" id="last_name" value="{{Auth::user()->email}}" class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label for="bio">Ajouter une Biographie</label>
-                        <textarea name="bio" id="biod" rows="3" class="form-control"></textarea>
+                        <textarea name="biographie" id="biod" rows="3" class="form-control"></textarea>
                     </div>
                   </div>
                   <div class="offset-md-1 col-md-3">
@@ -55,7 +55,7 @@
                             </div>
                             <div class="fileinput-preview fileinput-exists img-thumbnail" style="max-width: 150px; max-height: 150px;"></div>
                             <div class="mt-2">
-                                <span class="btn btn-outline-secondary btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                <span class="btn btn-outline-secondary btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="photo"></span>
                                 <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
                             </div>
                         </div>

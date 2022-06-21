@@ -71,13 +71,16 @@ class ProfileController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $new_user = User::find($user);
+        $fileName=$request->file('photo')->getClientOriginalName();
+        $path=$request->file('photo')->storeAs('uploads', $fileName, 'public');
+
+       /* $new_user = User::find($user);
         $new_user->update([
             'name'=>$request->name,
             'email'=>$request->email,
             'bio'=>$request->biographie,
             'photo'=>$request->photo,
-            ]);
+            ]);*/
     }
 
     /**
