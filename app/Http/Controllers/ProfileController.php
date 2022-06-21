@@ -71,7 +71,9 @@ class ProfileController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user = User::finnd($user);
+        $new_user = User::finnd($user);
+        $new_user->update([
+            ]);
     }
 
     /**
