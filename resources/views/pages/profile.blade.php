@@ -22,7 +22,7 @@
               <div class="card-header card-title">
                 <strong>Edit Profile</strong>
               </div>  
-            <form action="{{route('profile')}}" method="post">    
+            <form action="{{route('profile')}}" method="post" enctype="multipart/form-data">    
             @csrf     
               <div class="card-body">
                 <div class="row">
