@@ -80,13 +80,13 @@ class ProfileController extends Controller
         
         $path=$request->file('photo')->storeAs('uploads', $fileName, 'public');
 
-       /* $new_user = User::find($user);
+        $new_user = User::find($user);
         $new_user->update([
             'name'=>$request->name,
             'email'=>$request->email,
             'bio'=>$request->biographie,
-            'photo'=>$request->photo,
-            ]);*/
+            'photo'=>$fileName,
+            ]);
     }
 
     /**
