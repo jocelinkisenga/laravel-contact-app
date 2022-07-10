@@ -74,8 +74,9 @@ class ProfileController extends Controller
      */
     public function update(Request $request)
     {
+        $user = Auth::user()->id;
 
-       
+       if($request->photo){
         $fileName= time().'.'.$request->file('photo')->getClientOriginalName();
         
         $path=$request->file('photo')->storeAs('uploads', $fileName, 'public');
@@ -87,6 +88,18 @@ class ProfileController extends Controller
             'bio'=>$request->biographie,
             'photo'=>$fileName,
             ]);
+       }
+       $new_user = User::find($user);
+        $new_user->update([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'bio'=>$request->biographie,
+            ]);
+        
+        
+
+        
+        return redirect("/");
     }
 
     /**

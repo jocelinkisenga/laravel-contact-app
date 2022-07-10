@@ -43,7 +43,7 @@
 
                     <div class="form-group">
                         <label for="bio">Ajouter une Biographie</label>
-                        <textarea name="biographie" id="biod" rows="3" class="form-control"></textarea>
+                        <textarea name="biographie" value="{{Auth::user()->bio}}" id="biod" rows="3" class="form-control"></textarea>
                     </div>
                   </div>
                   <div class="offset-md-1 col-md-3">
