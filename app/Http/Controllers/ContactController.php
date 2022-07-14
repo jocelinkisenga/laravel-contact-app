@@ -52,7 +52,7 @@ class ContactController extends Controller
         return redirect('/');
     }
 
-    public function show (string $slug, int $id){
+    public function show ( int $id){
         $Contact = Contact::findOrFail($id);
         
         return view('pages.show', ['contact'=>$Contact]);

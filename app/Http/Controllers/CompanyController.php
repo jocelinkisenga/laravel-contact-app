@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Company;
+use Auth;
 
 class CompanyController extends Controller
 {
 
     public function index(){
-        $companies = Company::paginate(2);
+        $companies = Company::whereUser_id(Auth::user()->id)->get();
         return view('pages.allCompanies', ['companies'=>$companies]);
     }
 
